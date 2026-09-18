@@ -1,13 +1,34 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package restaurante;
 
-/**
- *
- * @author Admin
- */
 public class itemConsumacao {
+
+ String nome;
+ double preco;
+ int quant;
+
+public String getNome(){
+    return nome;
     
+}
+public void setNome(String nome){
+        this.nome = nome;
+}
+public void setPreco(){
+        this.preco = preco;
+}
+public double getPreco(){
+     return preco;
+
+}
+public int getQuant(){
+      return quant;
+}
+public void setQuant(){
+       this.quant = quant;
+       
+}
+public double getSubtotal(){
+   return subtotal;
+}
 }
