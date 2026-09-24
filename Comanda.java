@@ -1,52 +1,51 @@
-
-package restaurante;
+package restaurante1;
 
 public class Comanda {
-    
-    
+
     private int id;
-    private int numComanda; 
-    private  itemConsumacao[] itens;
-    
-    
-    
-    public Comanda(int id, int numComanda){
-    this.id = id;
-    this.numComanda = numComanda;
-    this.itens = new itemConsumacao[numComanda];
-    
+    private int numComanda;
+    private itemconsumacao[] itemConsumacao;
+
+    public Comanda(int id, int numComanda) {
+        this.id = id;
+        this.numComanda = numComanda;
+        this.itemConsumacao = new itemconsumacao[10];
     }
-    public int getId(){
-      return id;
-}
-    public void AddItem (itemConsumacao item){
-    
-        itemConsumacao[] novoarray = new itemConsumacao[this.itens.length + 1];
-        for(int i =0; i < this.itens.length; i++){
-            novoarray[i] = this.itens[i];
-        }
-        novoarray[novoarray.length - 1] = item;
-        this.itens = novoarray;
+
+    public int getId() {
+        return id;
     }
-    public double CalcularTotal(){
-        double CalcularTotal = 0;
-        
-        for(int i = 0; i < 10; i++){
-            
-            
+
+    public int getNumComanda() {
+        return numComanda;
+    }
+
+    public void AddItem(itemconsumacao item) {
+
+        for (int i = 0; i < 10; i++) {
+
+            if (itemConsumacao[i] == null) {
+                itemConsumacao[i] = item;
+                break;
+            }
         }
     }
-     public int getnumComanda(){
-      return numComanda;
-     }
-     public itemConsumacao[] getitens(){
-      return itens;
-     }
-    
-    
+
+    public double calcularTotal() {
+
+        double total = 0;
+
+        for (int i = 0; i < 10; i++) {
+
+            if (itemConsumacao[i] != null) {
+                total = total + itemConsumacao[i].getSubtotal();
+            }
+        }
+
+        return total;
+    }
+
+    public itemconsumacao[] getItens() {
+        return itemConsumacao;
+    }
 }
-
-
-
-
-    
