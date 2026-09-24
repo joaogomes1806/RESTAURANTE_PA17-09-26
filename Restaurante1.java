@@ -7,13 +7,13 @@ public class Restaurante1 {
         itemconsumacao item1 = new itemconsumacao();
 
         item1.setNome("Coca-Cola");
-        item1.setPreco(6.00);
+        item1.setPreco(9.00);
         item1.setQuant(2);
 
         itemconsumacao item2 = new itemconsumacao();
 
         item2.setNome("Hamburguer");
-        item2.setPreco(15.00);
+        item2.setPreco(19.00);
         item2.setQuant(1);
 
         Comanda comanda = new Comanda(1, 10);
